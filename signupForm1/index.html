@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="index.js"></script>
+    <script>
+        function showDate(){
+            document.getElementById("show").innerHTML = Date();
+        }
+    </script>
+</head>
+<body align="center" scrolling="yes" style="background: url(./signUpImg.jpg) no-repeat center center fixed; background-size: cover; opacity: 2">
+    <h2 class="stick"> REGISTRATION FORM </h2>
+    <div id="layout">
+        <div>
+            <div id='frm'>
+            <form>
+
+                <div>Name: <input type="text" name="first_name" id="first_name"></div>
+                <div>Last Name: <input type="text" name="last_name"></div>
+                <div>Email: <input type="email" name="email"></div>
+                <div>Password: <input type="password" minlength="6" name="password"></div>
+                <div>Birthday: <input type="date" name="birthday"></div>
+                <div>
+                    Gender:
+                    <input type="radio" name="gender" value="male">male 
+                    <input type="radio" name="gender" value="female">female
+                    <input type="radio"name="gender" value="other">other
+                </div>
+                <div>
+                    Pets:
+                    <input type="checkbox" name="cat"> Cat
+                    <input type="checkbox" name="dog"> Dog
+                </div>
+                <div>
+                    Time of arrival: 
+                    <select name="time">
+                        <option value="later" >later</option>
+                        <option value="now" >now</option>
+                        <option value="soon">soon</option>
+                        <option value="past">past</option>
+                    </select>
+                </div>
+                <button type="button" class="grow" id="grw" onclick="displayAr()"> Submit </button> 
+                <input type="reset" class="grow">
+            </form>
+            </div>
+        </div>
+
+        <div id="display">
+            <p id="displayArea"></p>
+        </div>
+    </div>
+    <div>
+        <button class="grow" onclick="showDate()"> get date </button>
+        <p id="show"> </p>
+    </div>
+
+    <!-- div is used to divide the content into sections to add stylesand wrap a element -->
+    <!-- same goes with the span but it is inline element -->
+</body>
+</html>
+
+<!-- http://127.0.0.1:5500/index.html?first_name=jeetan&last_name=manjhi&email=fake%40gg.com&password=nothing&birthday=2021-08-05&gender=male&dog=on&time=now -->
+
+<!-- view-source:https://waitbutwhy.com/2020/01/sick-giant.html -->
+<!-- paletton.com -->
+<!-- css tricks -->
+<!-- google fonts -->
+
+
+<!-- we can use img { float: left/right } depending upon how we want arrange our text and image together -->
+<!-- http://flexboxfroggy.com/ for practicing flexbox -->
